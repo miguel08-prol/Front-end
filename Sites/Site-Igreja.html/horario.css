@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --primary-color: #004d99;
+    --secondary-color: #ffd700;
+    --bg-color: #f9fafc;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+.cabecalho {
+    background: linear-gradient(135deg, var(--primary-color), #14354d);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.cabecalho h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.lista li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+    font-size: 1.2rem;
+}
+
+.lista li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.home-icon {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.home-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: #ffffff;
+    transition: fill 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+.home-icon:hover svg {
+    fill: var(--secondary-color);
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+}
+
+.retrato {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteúdo principal */
+.corpo {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.corpo h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.corpo p {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.corpo h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.meio {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 30px auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--secondary-color);
+    object-fit: cover;
+}
+
+/* Cards */
+.card-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--card-bg);
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-section img {
+    flex: 1 1 300px;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-content {
+    flex: 2 1 400px;
+    padding: 15px;
+}
+
+.card-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Footer */
+.rodape {
+    background: #14354d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.95rem;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .cabecalho h1 {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .lista {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .card-content {
+        padding: 10px 0;
+    }
+
+    .corpo {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .corpo h1 {
+        font-size: 1.8rem;
+    }
+
+    .corpo h2 {
+        font-size: 1.5rem;
+    }
+
+    .home-icon {
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .retrato {
+        width: 60px;
+        height: 60px;
+    }
+}
