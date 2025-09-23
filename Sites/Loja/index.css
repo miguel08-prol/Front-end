@@ -155,17 +155,20 @@ h3 {
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center; 
+    width: 100%; 
 }
 
 h3::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%; 
     bottom: -5px;
     width: 50px;
     height: 3px;
     background-color: var(--cor-destaque);
     border-radius: 2px;
+    transform: translateX(-50%); 
 }
 
 article {
@@ -294,13 +297,16 @@ article {
     font-weight: 600;
     color: var(--cor-destaque);
     margin: 0;
+    text-align: center; 
 }
+
 
 .produto-preco {
     font-size: 1rem;
     font-weight: 500;
     color: var(--cor-texto-claro);
     margin: 0;
+    text-align: center; 
 }
 
 .produto-descricao {
