@@ -1,0 +1,133 @@
+/* =============================
+1. VARIÁVEIS E BASE (DARK MODE)
+=============================
+*/
+:root {
+    --primary-color: #4A90E2; /* Azul vibrante */
+    --background-color: #1a1a2e; /* Azul Marinho Escuro */
+    --card-color: rgba(255, 255, 255, 0.05); /* Fundo sutil para cards */
+    --text-color: #e4e4e4;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --hover-color: #2e446d;
+}
+
+body {
+    /* Define a cor de fundo e a cor do texto base */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    
+    /* Fonte moderna e limpa */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Transição suave para mudanças de cor (ex: hover) */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Redefine as cores de fundo do Bootstrap para o tema escuro */
+.bg-body-tertiary {
+    background-color: var(--card-color) !important;
+}
+
+.link-body-emphasis {
+    color: var(--text-color) !important;
+}
+.link-body-emphasis:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Linha divisória */
+.border-bottom {
+    border-color: var(--border-color) !important;
+}
+
+/*
+=============================
+2. CABEÇALHO E NAVEGAÇÃO
+=============================
+*/
+
+/* Estilo para a barra superior e navegação */
+header.py-3, nav.py-2 {
+    /* Efeito de Vidro Fosco (Glassmorphism) */
+    background: rgba(46, 68, 109, 0.2); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* O borrão do vidro */
+    -webkit-backdrop-filter: blur(10px);
+    border-color: var(--border-color) !important;
+}
+
+/* Cor do input de busca e placeholder */
+.form-control {
+    background-color: var(--hover-color);
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+}
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* Estado ativo/selecionado na navegação */
+.nav-link.active {
+    position: relative;
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+.nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    position: absolute;
+    bottom: -10px; /* Ajusta a posição da linha para baixo */
+    left: 0;
+    border-radius: 2px;
+}
+
+/*
+=============================
+3. SEÇÕES/CONTEÚDO (LAYOUT)
+=============================
+*/
+
+/* Estilo para as "colunas" que são cards */
+.container-fluid .rounded-3 {
+    background-color: var(--card-color) !important;
+    border-color: var(--border-color) !important;
+    padding: 1rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Tabela */
+.table {
+    --bs-table-bg: var(--card-color);
+    --bs-table-color: var(--text-color);
+    --bs-table-border-color: var(--border-color);
+}
+.table thead th {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/*
+=============================
+4. RODAPÉ (FOOTER)
+=============================
+*/
+
+footer {
+    /* Efeito sutil no rodapé */
+    border-top: 1px solid var(--border-color) !important;
+    padding-top: 1rem !important;
+    margin-top: 2rem !important;
+}
+
+/* Ícones de redes sociais no rodapé */
+footer svg {
+    fill: var(--text-color);
+    transition: fill 0.3s;
+}
+footer svg:hover {
+    fill: var(--primary-color);
+}

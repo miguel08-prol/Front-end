@@ -1,0 +1,23 @@
+/* Seu index.css deve ter isso */
+h3 {
+    /* ... outras propriedades ... */
+    text-align: center; 
+    width: 100%; 
+}
+
+h3::after {
+    /* ... outras propriedades ... */
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.produto-nome {
+    /* ... outras propriedades ... */
+    text-align: center;
+}
+
+.produto-preco {
+    /* ... outras propriedades ... */
+    text-align: center; 
+}
+/* ... */
